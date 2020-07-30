@@ -12,15 +12,15 @@ def predict_class(image_path):
 
     result = model.predict(image)
 
-    print({'Classification:': result[0]})
+    print({'Resultado do classificador:': result[0]})
 
 
-parser = argparse.ArgumentParser(description='Submits an image file to running API')
+parser = argparse.ArgumentParser(description='Submeta uma imagem para o API')
 parser.add_argument('image', metavar='img', type=str,
                     help='the input image file path')
 
 args = parser.parse_args()
 
 predict_class(parser.parse_args().image)
-print("Prediction concluded with success")
+print("Predicao concluida")
 sys.exit(1)
