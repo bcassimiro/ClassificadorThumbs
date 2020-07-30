@@ -6,7 +6,7 @@ from image_tools import image_pipe
 
 
 def predict_class(image_path):
-    image = image_pipe('./upload_files/{}'.format(image_path))
+    image = image_pipe('./Imagens para teste/{}'.format(image_path))
 
     model = joblib.load('./models/svm.sav')
 
